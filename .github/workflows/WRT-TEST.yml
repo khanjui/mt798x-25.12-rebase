@@ -1,0 +1,16 @@
+name: Chasey ImmortalWrt - AX3000T
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    uses: ./.github/workflows/WRT-CORE.yml
+    with:
+      WRT_CONFIG: AX3000T
+      WRT_REPO: https://github.com/hxlls/mt798x-25.12-rebase.git
+      WRT_BRANCH: 25.12
+      WRT_SOURCE: chasey-dev/immortalwrt-mt798x-rebase
